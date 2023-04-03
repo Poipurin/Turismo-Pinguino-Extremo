@@ -15,10 +15,6 @@ public class Hospederia extends MedioDeAlojamiento{
         this.esFumador = esFumador;
     }
 
-    public Hospederia(int valorBaseNoche, int cantidadDeNoches, DatosCliente datosCliente, String tipoTemporada, int cantidadDePersonas) {
-        super(valorBaseNoche, cantidadDeNoches, datosCliente, tipoTemporada, cantidadDePersonas);
-    }
-
     public Hospederia() {
     }
 
