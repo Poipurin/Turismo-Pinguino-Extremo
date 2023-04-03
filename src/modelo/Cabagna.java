@@ -22,4 +22,7 @@ public class Cabagna extends Hospederia {
     public void setConChimenea(boolean conChimenea) {
         this.conChimenea = conChimenea;
     }
+    public int incrementaValorBase(){
+        return 0;
+    }
 }

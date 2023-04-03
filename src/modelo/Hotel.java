@@ -22,4 +22,8 @@ public class Hotel extends Hospederia{
     public void setConDesayuno(boolean conDesayuno) {
         this.conDesayuno = conDesayuno;
     }
+
+    public int adicional(){
+        return 0;
+    }
 }

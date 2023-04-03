@@ -48,5 +48,13 @@ public class MedioDeAlojamiento {
     public void setTipoTemporada(String tipoTemporada) {
         this.tipoTemporada = tipoTemporada;
     }
-
+    public int subtotal(){
+        return 0;
+    }
+    public int bonoDescuento(){
+        return 0;
+    }
+    public int valorACancelar(){
+        return 0;
+    }
 }
