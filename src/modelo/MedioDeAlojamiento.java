@@ -54,13 +54,15 @@ public abstract class MedioDeAlojamiento {
     }
     //•	bonoDescuento: devolverá el valor a descontar sabiendo que es un 25% del subTotal si el tipo
     // de temporada es baja o es de un 12.5% si el tipo Temporada es media.
+
     public int bonoDescuento(){
-        int bonoDescuento = 0;
-        switch (this.getTipoTemporada().toLowerCase()){
-            case"Temporada Baja":
-                    bonoDescuento = Math.round(this.subtotal()*25/100);
-                    break;
-            case"Temporada Media":
+        int bonoDescuento = -1;
+
+        switch(this.getTipoTemporada().toLowerCase()){
+            case "temporada baja":
+                bonoDescuento = Math.round(this.subtotal()*25/100);
+                break;
+            case "temporada media":
                 bonoDescuento = (int)Math.round(this.subtotal()*12.5/100);
                 break;
             default:
