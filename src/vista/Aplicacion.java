@@ -22,7 +22,7 @@ public class Aplicacion {
         System.out.println(" ");
         System.out.println("Opción Hotel");
         System.out.println(" ");
-        Hotel hotel = new Hotel(new DatosCliente("Sofi", "19.342.654-2"),120000,5,"Temporada baja",2,3,true,true);
+        Hotel hotel = new Hotel(new DatosCliente("Sofi", "19.342.654-2"),120000,5,"Temporada baja",2,3,false,true);
         System.out.println("El subtotal a pagar por el hotel es de: $"+hotel.subtotal());
         System.out.println("El valor adicional por habitación de fumador y servicio de desayuno es: $"+hotel.adicional());
         System.out.println("El bono descuento por temporada es de: $"+hotel.bonoDescuento());
