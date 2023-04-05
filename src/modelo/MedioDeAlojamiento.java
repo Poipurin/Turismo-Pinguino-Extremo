@@ -1,16 +1,16 @@
 package modelo;
 
-public class MedioDeAlojamiento {
+public abstract class MedioDeAlojamiento {
+    private DatosCliente datosCliente;
     private int valorBaseNoche;
     private int cantidadDeNoches;
-    private DatosCliente datosCliente;
     private String tipoTemporada;
     private int cantidadDePersonas;
 
-    public MedioDeAlojamiento(int valorBaseNoche, int cantidadDeNoches, DatosCliente datosCliente, String tipoTemporada, int cantidadDePersonas) {
+    public MedioDeAlojamiento(DatosCliente datosCliente, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada, int cantidadDePersonas) {
+        this.datosCliente = datosCliente;
         this.valorBaseNoche = valorBaseNoche;
         this.cantidadDeNoches = cantidadDeNoches;
-        this.datosCliente = datosCliente;
         this.tipoTemporada = tipoTemporada;
     }
 
@@ -48,13 +48,25 @@ public class MedioDeAlojamiento {
     public void setTipoTemporada(String tipoTemporada) {
         this.tipoTemporada = tipoTemporada;
     }
+    //•	subtotal: devolverá el subtotal a cancelar el cual será cantidad de noches por el valorBaseNoche
     public int subtotal(){
-        return 0;
+        return (this.getCantidadDeNoches()*this.getValorBaseNoche());
     }
+    //•	bonoDescuento: devolverá el valor a descontar sabiendo que es un 25% del subTotal si el tipo
+    // de temporada es baja o es de un 12.5% si el tipo Temporada es media.
     public int bonoDescuento(){
-        return 0;
+        int bonoDescuento = 0;
+        switch (this.getTipoTemporada().toLowerCase()){
+            case"Temporada Baja":
+                    bonoDescuento = Math.round(this.subtotal()*25/100);
+                    break;
+            case"Temporada Media":
+                bonoDescuento = (int)Math.round(this.subtotal()*12.5/100);
+                break;
+            default:
+                break;
+        }
+        return bonoDescuento;
     }
-    public int valorACancelar(){
-        return 0;
-    }
+    public abstract int valorACancelar();
 }

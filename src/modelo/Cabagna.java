@@ -3,8 +3,8 @@ package modelo;
 public class Cabagna extends Hospederia {
     private boolean conChimenea;
 
-    public Cabagna(int valorBaseNoche, int cantidadDeNoches, DatosCliente datosCliente, String tipoTemporada, int cantidadDePersonas, int capacidad, boolean esFumador, boolean conChimenea) {
-        super(valorBaseNoche, cantidadDeNoches, datosCliente, tipoTemporada, cantidadDePersonas, capacidad, esFumador);
+    public Cabagna(DatosCliente datosCliente, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada, int cantidadDePersonas, int capacidad, boolean esFumador, boolean conChimenea) {
+        super(datosCliente, valorBaseNoche, cantidadDeNoches,  tipoTemporada, cantidadDePersonas, capacidad, esFumador);
         this.conChimenea = conChimenea;
     }
 
@@ -23,6 +23,16 @@ public class Cabagna extends Hospederia {
         this.conChimenea = conChimenea;
     }
     public int incrementaValorBase(){
+
+        int incrementaValor = 0;
+        if(this.getCapacidad() > 5){
+            incrementaValor = this.getValorBaseNoche() * 18/100;
+        }
+        return incrementaValor;
+    }
+    @Override
+    public int valorACancelar() {
         return 0;
     }
+
 }

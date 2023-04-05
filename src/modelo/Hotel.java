@@ -3,8 +3,8 @@ package modelo;
 public class Hotel extends Hospederia{
     private boolean conDesayuno;
 
-    public Hotel(int valorBaseNoche, int cantidadDeNoches, DatosCliente datosCliente, String tipoTemporada, int cantidadDePersonas, int capacidad, boolean esFumador, boolean conDesayuno) {
-        super(valorBaseNoche, cantidadDeNoches, datosCliente, tipoTemporada, cantidadDePersonas, capacidad, esFumador);
+    public Hotel(DatosCliente datosCliente, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada, int cantidadDePersonas, int capacidad, boolean esFumador, boolean conDesayuno) {
+        super(datosCliente,valorBaseNoche, cantidadDeNoches, tipoTemporada, cantidadDePersonas, capacidad, esFumador);
         this.conDesayuno = conDesayuno;
     }
 
@@ -14,7 +14,6 @@ public class Hotel extends Hospederia{
 
     public Hotel() {
     }
-
     public boolean isConDesayuno() {
         return conDesayuno;
     }
@@ -24,6 +23,10 @@ public class Hotel extends Hospederia{
     }
 
     public int adicional(){
+        return 0;
+    }
+    @Override
+    public int valorACancelar() {
         return 0;
     }
 }
