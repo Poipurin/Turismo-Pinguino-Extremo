@@ -1,9 +1,6 @@
 package vista;
 
-import modelo.Cabagna;
-import modelo.Carpa;
-import modelo.DatosCliente;
-import modelo.MedioDeAlojamiento;
+import modelo.*;
 
 public class Aplicacion {
     public static void main(String[] args) {
@@ -22,7 +19,13 @@ public class Aplicacion {
         System.out.println("El subtotal a pagar por la carpa es de: $"+carpa.subtotal());
         System.out.println("El bono descuento por temporada es de: $"+carpa.bonoDescuento());
         System.out.println("El valor total a cancelar por la carpa es de: $"+carpa.valorACancelar());
+        System.out.println(" ");
+        System.out.println("Opción Hotel");
+        System.out.println(" ");
+        Hotel hotel = new Hotel(new DatosCliente("Sofi", "19.342.654-2"),120000,5,"Temporada baja",2,3,true,true);
+        System.out.println("El subtotal a pagar por el hotel es de: $"+hotel.subtotal());
+        System.out.println("El valor adicional por habitación de fumador y servicio de desayuno es: $"+hotel.adicional());
+        System.out.println("El bono descuento por temporada es de: $"+hotel.bonoDescuento());
+        System.out.println("El valor total a cancelar por el hospedaje en el hotel es de: $"+hotel.valorACancelar());
     }
-
-
 }
