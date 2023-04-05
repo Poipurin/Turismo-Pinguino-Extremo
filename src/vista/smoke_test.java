@@ -3,7 +3,7 @@ package vista;
 import modelo.*;
 
 public class smoke_test {
-    public static void main(String[] args) {
+    public static void smoke_test(String[] args) {
         System.out.println(" ");
         System.out.println("Opción Cabaña");
         System.out.println(" ");
