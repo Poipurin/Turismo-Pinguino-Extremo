@@ -20,6 +20,6 @@ public class Carpa extends MedioDeAlojamiento{
 
     @Override
     public int valorACancelar() {
-        return 0;
+        return this.subtotal() - bonoDescuento();
     }
 }
