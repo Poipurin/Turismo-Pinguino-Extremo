@@ -8,13 +8,9 @@ public class Hotel extends Hospederia{
         this.conDesayuno = conDesayuno;
     }
 
-    public Hotel(boolean conDesayuno) {
-        this.conDesayuno = conDesayuno;
-    }
-
     public Hotel() {
     }
-    public boolean isConDesayuno() {
+    public boolean getConDesayuno() {
         return conDesayuno;
     }
 
@@ -23,10 +19,15 @@ public class Hotel extends Hospederia{
     }
 
     public int adicional(){
-        return 0;
+
+        int adicional=0;
+        if(this.getEsFumador() == true || this.getConDesayuno() == true){
+            adicional=Math.round(this.subtotal()*30/100);
+        }
+        return adicional;
     }
     @Override
     public int valorACancelar() {
-        return 0;
+        return (this.subtotal() + this.adicional()) - this.bonoDescuento() ;
     }
 }
