@@ -62,11 +62,15 @@ public class Alojamiento {
         for(int i=0; i < alojamiento.size();i++){
             if(alojamiento.get(i) instanceof Carpa){
                 carpa = (Carpa) alojamiento.get(i);
-                mensaje = mensaje + "El medio de alojamiento es: Carpa" + "\n Cliente: "+carpa.getDatosCliente().getNombre()+ "\n Rut asociado al cliente: " + carpa.getDatosCliente().getRut() + "\n Valor base por noche: $" +carpa.getValorBaseNoche()+ "\n Cantidad de noches: " +carpa.getCantidadDeNoches()+ "\n Temporada: " +carpa.getTipoTemporada()+"\n Cantidad de personas: " +carpa.getCantidadPersonas() +"\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░";
+                mensaje = mensaje + "\n El medio de alojamiento es: Carpa" + "\n Cliente: "+carpa.getDatosCliente().getNombre()+ "\n Rut asociado al cliente: " + carpa.getDatosCliente().getRut() + "\n Valor base por noche: $" +carpa.getValorBaseNoche()+ "\n Cantidad de noches: " +carpa.getCantidadDeNoches()+ "\n Temporada: " +carpa.getTipoTemporada()+"\n Cantidad de personas: " +carpa.getCantidadPersonas() +"\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░";
                 contador++;
             }else if(alojamiento.get(i) instanceof Cabagna){
                 cabagna = (Cabagna) alojamiento.get(i);
-                mensaje = mensaje + "El medio de alojamiento es: Cabaña" + "\n Cliente: "+cabagna.getDatosCliente().getNombre()+ "\n Rut asociado al cliente: " + cabagna.getDatosCliente().getRut() + "\n Valor base por noche: $" +cabagna.getValorBaseNoche()+ "\n Cantidad de noches: " +cabagna.getCantidadDeNoches()+ "\n Temporada: " +cabagna.getTipoTemporada()+"\n Capacidad: " + cabagna.getCapacidad()+ "\n Es fumador:"+ cabagna.getEsFumador()+"\n Con Chimenea: "+cabagna.getConChimenea() +"\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░";
+                mensaje = mensaje + "\n El medio de alojamiento es: Cabaña" + "\n Cliente: "+cabagna.getDatosCliente().getNombre()+ "\n Rut asociado al cliente: " + cabagna.getDatosCliente().getRut() + "\n Valor base por noche: $" +cabagna.getValorBaseNoche()+ "\n Cantidad de noches: " +cabagna.getCantidadDeNoches()+ "\n Temporada: " +cabagna.getTipoTemporada()+"\n Capacidad: " + cabagna.getCapacidad()+ "\n Es fumador: "+ cabagna.getEsFumador()+"\n Con Chimenea: "+cabagna.getConChimenea() +"\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░";
+                contador++;
+            } else if (alojamiento.get(i) instanceof Hotel) {
+                hotel = (Hotel) alojamiento.get(i);
+                mensaje = mensaje + "\n El medio de alojamiento es: Hotel" + "\n Cliente: "+hotel.getDatosCliente().getNombre()+ "\n Rut asociado al cliente: " + hotel.getDatosCliente().getRut() + "\n Valor base por noche: $" +hotel.getValorBaseNoche()+ "\n Cantidad de noches: " +hotel.getCantidadDeNoches()+ "\n Temporada: " +hotel.getTipoTemporada()+"\n Capacidad: " + hotel.getCapacidad()+ "\n Es fumador: "+ hotel.getEsFumador()+"\n Con desayuno: "+hotel.getConDesayuno() +"\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░";
                 contador++;
             }
         }

@@ -1,12 +1,23 @@
 package vista;
 
 import controlador.Alojamiento;
+import modelo.Cabagna;
+import modelo.Carpa;
+import modelo.DatosCliente;
+import modelo.Hotel;
 
 import java.util.ArrayList;
 
 public class Aplicacion {
     public static void main(String[] args) {
         Alojamiento alojamiento = new Alojamiento(new ArrayList<>());
+
+        Carpa carpa = new Carpa(new DatosCliente("Pepito","12.345.236-0"),2000,5,"Temporada media",2);
+        alojamiento.ingresarCarpa(carpa);
+        Cabagna cabagna = new Cabagna(new DatosCliente("Bárbara", "18.543.213-K"),10000,5,"Temporada baja",10,false,true);
+        alojamiento.ingresarCabagna(cabagna);
+        Hotel hotel = new Hotel(new DatosCliente("Sofi", "19.342.654-2"),120000,5,"Temporada baja",3,false,true);
+        alojamiento.ingresarHotel(hotel);
 
         int opcion;
         do{
@@ -16,7 +27,11 @@ public class Aplicacion {
                     System.out.println("Ingresar medio de alojamiento");
                     break;
                 case 2:
-                    System.out.println("Alojamientos");
+                    if(alojamiento.getAlojamiento().size()==0){
+                        System.out.println("No hay alojamientos registrados");
+                    }else{
+                        System.out.println(alojamiento.mostrarAlojamientos());
+                    }
                     break;
                 case 3:
                     System.out.println("Datos cliente");
@@ -44,7 +59,7 @@ public class Aplicacion {
     }
 
     public static int menu(){
-        System.out.println("******** Turismo el pingüino extremo ********");
+        System.out.println("○○○○○○○○○○○○○○ Turismo el pingüino extremo ○○○○○○○○○○○○○○");
         System.out.println("1.- Ingresar medio de alojamiento");
         System.out.println("2.- Mostrar medios de alojamiento ");
         System.out.println("3.- Datos del cliente");
@@ -59,3 +74,4 @@ public class Aplicacion {
     }
 
 }
+
