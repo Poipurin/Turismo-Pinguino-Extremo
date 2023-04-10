@@ -2,21 +2,21 @@ package modelo;
 
 public class Carpa extends MedioDeAlojamiento{
 
-    private int cantidadDePersonas;
-    public Carpa(DatosCliente datosCliente, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada, int cantidadDePersonas) {
-        super(datosCliente,valorBaseNoche, cantidadDeNoches, tipoTemporada, cantidadDePersonas);
-        this.cantidadDePersonas = cantidadDePersonas;
+    private int cantidadPersonas;
+    public Carpa(DatosCliente datosCliente, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada, int cantidadPersonas) {
+        super(datosCliente,valorBaseNoche, cantidadDeNoches, tipoTemporada);
+        this.cantidadPersonas = cantidadPersonas;
     }
 
     public Carpa() {
     }
 
-    public int getCantidadDePersonas() {
-        return cantidadDePersonas;
+    public int getCantidadPersonas() {
+        return cantidadPersonas;
     }
 
-    public void setCantidadDePersonas(int cantidadDePersonas) {
-        this.cantidadDePersonas = cantidadDePersonas;
+    public void setCantidadPersonas(int cantidadPersonas) {
+        this.cantidadPersonas = cantidadPersonas;
     }
 
     @Override
