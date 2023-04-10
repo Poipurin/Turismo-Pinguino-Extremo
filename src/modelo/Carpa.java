@@ -5,6 +5,7 @@ public class Carpa extends MedioDeAlojamiento{
     private int cantidadDePersonas;
     public Carpa(DatosCliente datosCliente, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada, int cantidadDePersonas) {
         super(datosCliente,valorBaseNoche, cantidadDeNoches, tipoTemporada, cantidadDePersonas);
+        this.cantidadDePersonas = cantidadDePersonas;
     }
 
     public Carpa() {
