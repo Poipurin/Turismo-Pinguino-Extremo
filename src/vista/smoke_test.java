@@ -7,7 +7,7 @@ public class smoke_test {
         System.out.println(" ");
         System.out.println("Opción Cabaña");
         System.out.println(" ");
-        Cabagna cabagna = new Cabagna(new DatosCliente("Bárbara", "18.543.213-K"),10000,5,"Temporada baja",10,10,false,true);
+        Cabagna cabagna = new Cabagna(new DatosCliente("Bárbara", "18.543.213-K"),10000,5,"Temporada baja",10,false,true);
         System.out.println("El subtotal a pagar por la cabaña es de: $"+cabagna.subtotal());
         System.out.println("El incremento en el valor base es de: $"+cabagna.incrementaValorBase());
         System.out.println("El bono descuento por temporada es de: $"+cabagna.bonoDescuento());
@@ -22,7 +22,7 @@ public class smoke_test {
         System.out.println(" ");
         System.out.println("Opción Hotel");
         System.out.println(" ");
-        Hotel hotel = new Hotel(new DatosCliente("Sofi", "19.342.654-2"),120000,5,"Temporada baja",2,3,false,true);
+        Hotel hotel = new Hotel(new DatosCliente("Sofi", "19.342.654-2"),120000,5,"Temporada baja",3,false,true);
         System.out.println("El subtotal a pagar por el hotel es de: $"+hotel.subtotal());
         System.out.println("El valor adicional por habitación de fumador y servicio de desayuno es: $"+hotel.adicional());
         System.out.println("El bono descuento por temporada es de: $"+hotel.bonoDescuento());
