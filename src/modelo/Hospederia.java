@@ -4,8 +4,8 @@ public abstract class Hospederia extends MedioDeAlojamiento{
     private int capacidad;
     private boolean esFumador;
 
-    public Hospederia(DatosCliente datosCliente, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada, int cantidadDePersonas, int capacidad, boolean esFumador) {
-        super(datosCliente, valorBaseNoche, cantidadDeNoches, tipoTemporada, cantidadDePersonas);
+    public Hospederia(DatosCliente datosCliente, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada, int capacidad, boolean esFumador) {
+        super(datosCliente, valorBaseNoche, cantidadDeNoches, tipoTemporada);
         this.capacidad = capacidad;
         this.esFumador = esFumador;
     }

@@ -5,9 +5,9 @@ public abstract class MedioDeAlojamiento {
     private int valorBaseNoche;
     private int cantidadDeNoches;
     private String tipoTemporada;
-    private int cantidadDePersonas;
 
-    public MedioDeAlojamiento(DatosCliente datosCliente, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada, int cantidadDePersonas) {
+
+    public MedioDeAlojamiento(DatosCliente datosCliente, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada) {
         this.datosCliente = datosCliente;
         this.valorBaseNoche = valorBaseNoche;
         this.cantidadDeNoches = cantidadDeNoches;
