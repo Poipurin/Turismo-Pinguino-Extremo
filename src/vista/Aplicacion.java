@@ -68,7 +68,13 @@ public class Aplicacion {
                     }
                     break;
                 case 7:
-                    System.out.println("Valor a cancelar por el cliente");
+                    if (alojamiento.getAlojamiento().size() == 0) {
+                        System.out.println("No hay alojamientos registrados");
+                    } else {
+                        String rut;
+                        rut = solicitarRut();
+                        System.out.println(alojamiento.valorACancelar(rut));
+                    }
                     break;
                 case 8:
                     if (alojamiento.getAlojamiento().size() == 0) {

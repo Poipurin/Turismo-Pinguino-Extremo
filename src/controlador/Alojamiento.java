@@ -149,14 +149,14 @@ public class Alojamiento {
         return mensaje;
     }
 
-    public int valorACancelar(String rut) {
+    public String valorACancelar(String rut) {
         int total = 0;
         for (int i = 0; i < alojamiento.size(); i++) {
             if (alojamiento.get(i).getDatosCliente().getRut().compareToIgnoreCase(rut) == 0) {
-
+                return "El valor a cancelar por el cliente: "+ alojamiento.get(i).getDatosCliente().getRut()+" corresponde al monto de: $"+alojamiento.get(i).valorACancelar();
             }
         }
-        return 0;
+        return "No se encuentra el cliente, intente con otro rut.";
     }
 
     public int incrementoValorBase() {
