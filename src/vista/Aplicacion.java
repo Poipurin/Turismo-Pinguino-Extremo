@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class Aplicacion {
     public static void main(String[] args) {
         Alojamiento alojamiento = new Alojamiento(new ArrayList<>());
+        String rutCliente;
 
         Carpa carpa = new Carpa(new DatosCliente("Pepito", "12.345.236-0"), "Carpa", 2000, 5, "Temporada media", 2);
         alojamiento.ingresarCarpa(carpa);
@@ -25,6 +26,11 @@ public class Aplicacion {
             opcion = menu();
             switch (opcion) {
                 case 1:
+                    rutCliente = solicitarRut();
+                    if(alojamiento.buscarCliente(rutCliente) ==-1){
+                        System.out.println("Ingresa la cantidad de noches a reservar");
+                        int nochesAReservar= Leer.datoInt();
+                    }
                     System.out.println("Ingresar medio de alojamiento");
                     break;
                 case 2:
