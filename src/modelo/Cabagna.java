@@ -3,8 +3,8 @@ package modelo;
 public class Cabagna extends Hospederia {
     private boolean conChimenea;
 
-    public Cabagna(DatosCliente datosCliente, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada, int capacidad, boolean esFumador, boolean conChimenea) {
-        super(datosCliente, valorBaseNoche, cantidadDeNoches,  tipoTemporada, capacidad, esFumador);
+    public Cabagna(DatosCliente datosCliente, String tipoAlojamiento, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada, int capacidad, boolean esFumador, boolean conChimenea) {
+        super(datosCliente, tipoAlojamiento, valorBaseNoche, cantidadDeNoches,  tipoTemporada, capacidad, esFumador);
         this.conChimenea = conChimenea;
     }
 

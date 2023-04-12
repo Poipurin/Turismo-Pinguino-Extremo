@@ -3,8 +3,8 @@ package modelo;
 public class Carpa extends MedioDeAlojamiento{
 
     private int cantidadPersonas;
-    public Carpa(DatosCliente datosCliente, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada, int cantidadPersonas) {
-        super(datosCliente,valorBaseNoche, cantidadDeNoches, tipoTemporada);
+    public Carpa(DatosCliente datosCliente,String tipoAlojamiento, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada, int cantidadPersonas) {
+        super(datosCliente,tipoAlojamiento,valorBaseNoche, cantidadDeNoches, tipoTemporada);
         this.cantidadPersonas = cantidadPersonas;
     }
 
