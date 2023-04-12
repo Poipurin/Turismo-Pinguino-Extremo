@@ -78,5 +78,16 @@ public class Alojamiento {
             System.out.println("No hay alojamientos registrados");
         return mensaje;
     }
+
+    public String datosCliente(String rut){
+        for(int i=0; i < alojamiento.size();i++){
+            if(alojamiento.get(i).getDatosCliente().getRut().compareToIgnoreCase(rut)==0){
+                return "\n El cliente asociado al rut: "+alojamiento.get(i).getDatosCliente().getRut() +"\n es: "+ alojamiento.get(i).getDatosCliente().getNombre()
+                        + "\n Su estadía es de: "+alojamiento.get(i).getCantidadDeNoches()+ " noches."+"\n En temporada: " +alojamiento.get(i).getTipoTemporada()+ "\n Con un valor base de:  $"+alojamiento.get(i).getValorBaseNoche() + " por noche."
+               +"\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░";
+            }
+        }
+        return "El rut no está asociado a ningún cliente de Pingüino extremo";
+    }
 }
 
