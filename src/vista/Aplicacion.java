@@ -14,11 +14,12 @@ public class Aplicacion {
 
         Carpa carpa = new Carpa(new DatosCliente("Pepito", "12.345.236-0"), "Carpa", 2000, 5, "Temporada media", 2);
         alojamiento.ingresarCarpa(carpa);
-        Cabagna cabagna = new Cabagna(new DatosCliente("Bárbara", "18.543.213-K"), "Cabaña", 10000, 5, "Temporada baja", 10, false, true);
+        Cabagna cabagna = new Cabagna(new DatosCliente("Bárbara", "18.543.213-K"), "Cabaña", 10000, 5, "Temporada media", 10, false, true);
         alojamiento.ingresarCabagna(cabagna);
-        Hotel hotel = new Hotel(new DatosCliente("Sofi", "19.342.654-2"), "Hotel", 120000, 5, "Temporada baja", 3, true, true);
+        Hotel hotel = new Hotel(new DatosCliente("Sofi", "19.342.654-2"), "Hotel", 120000, 5, "Temporada media", 3, true, true);
         alojamiento.ingresarHotel(hotel);
-
+        Hotel hotel1 = new Hotel(new DatosCliente("Sofi2", "11.342.654-2"), "Hotel", 120000, 5, "Temporada media", 3, true, true);
+        alojamiento.ingresarHotel(hotel1);
         int opcion;
         do {
             opcion = menu();
@@ -44,17 +45,27 @@ public class Aplicacion {
                     break;
                 case 4:
                     if (alojamiento.getAlojamiento().size() == 0) {
-                        System.out.println("No hay clientes registrados en el hotel");
+                        System.out.println("No hay alojamientos registrados");
                     } else {
 
                         System.out.println("El Hotel tiene un total adicional de: $" + alojamiento.totalAdicional());
                     }
                     break;
                 case 5:
-                    System.out.println("Total bono descuento");
+                    if (alojamiento.getAlojamiento().size() == 0) {
+                        System.out.println("No hay alojamientos registrados");
+                    } else {
+
+                        System.out.println("El total del bono descuento es de de: $" + alojamiento.totalBonoDescuento());
+                    }
                     break;
                 case 6:
-                    System.out.println("Cantidad medios de alojamiento");
+                    if (alojamiento.getAlojamiento().size() == 0) {
+                        System.out.println("No hay alojamientos registrados");
+                    } else {
+
+                        System.out.println(alojamiento.cantidadMediosAlojamiento());
+                    }
                     break;
                 case 7:
                     System.out.println("Valor a cancelar por el cliente");

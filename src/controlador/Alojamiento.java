@@ -122,21 +122,40 @@ public class Alojamiento {
         for (int i = 0; i < alojamiento.size(); i++) {
             if (alojamiento.get(i) instanceof Hotel) {
                 hotel = (Hotel) alojamiento.get(i);
-                total = total + hotel.adicional();
+                total = total + (hotel.adicional());
             }
         }
         return total;
     }
 
     public int totalBonoDescuento() {
-        return 0;
+        int total = 0;
+
+        for (int i = 0; i < alojamiento.size(); i++) {
+            total = total + (alojamiento.get(i).bonoDescuento());
+        }
+        return total;
     }
 
-    public int cantidadMediosAlojamiento() {
-        return 0;
+    public String cantidadMediosAlojamiento() {
+        String mensaje = "";
+
+        for (int i = 0; i < alojamiento.size(); i++) {
+            if (i > 0) {
+                mensaje = mensaje + "La cantidad de medios de alojamiento en uso es: " + alojamiento.size();
+                break;
+            }
+        }
+        return mensaje;
     }
 
-    public int valorACancelar() {
+    public int valorACancelar(String rut) {
+        int total = 0;
+        for (int i = 0; i < alojamiento.size(); i++) {
+            if (alojamiento.get(i).getDatosCliente().getRut().compareToIgnoreCase(rut) == 0) {
+
+            }
+        }
         return 0;
     }
 

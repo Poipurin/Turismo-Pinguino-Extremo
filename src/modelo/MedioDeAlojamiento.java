@@ -59,7 +59,7 @@ public abstract class MedioDeAlojamiento {
     // de temporada es baja o es de un 12.5% si el tipo Temporada es media.
 
     public int bonoDescuento(){
-        int bonoDescuento = -1;
+        int bonoDescuento = 0;
 
         switch(this.getTipoTemporada().toLowerCase()){
             case "temporada baja":
