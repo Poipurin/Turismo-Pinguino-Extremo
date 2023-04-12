@@ -34,7 +34,13 @@ public class Aplicacion {
                     }
                     break;
                 case 3:
-                    System.out.println("Datos cliente");
+                    if(alojamiento.getAlojamiento().size()==0){
+                        System.out.println("No hay alojamientos registrados");
+                    }else{
+                        String rut;
+                        rut = solicitarRut();
+                        System.out.println(alojamiento.datosCliente(rut));
+                    }
                     break;
                 case 4:
                     System.out.println("Total adicional");
@@ -72,6 +78,9 @@ public class Aplicacion {
         System.out.println("Ingrese opción para continuar");
         return Leer.datoInt();
     }
-
+    public static String solicitarRut(){
+        System.out.println("Ingrese rut Ejemplo formato: 55.555.555-5 ");
+        return Leer.dato();
+    }
 }
 
