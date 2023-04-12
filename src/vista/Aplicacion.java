@@ -88,7 +88,7 @@ public class Aplicacion {
         return Leer.datoInt();
     }
     public static String solicitarRut(){
-        System.out.println("Ingrese rut Ejemplo formato: 55.555.555-5 ");
+        System.out.println("Ingrese rut Ejemplo formato: 55.555.555-5");
         return Leer.dato();
     }
 }
