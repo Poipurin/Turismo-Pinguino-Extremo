@@ -115,18 +115,16 @@ public class Alojamiento {
         return "No hay clientes asociados a ese rut en Turismo Pingüino extremo";
 
     }
-
-
-    /*public int totalAdicional(){
+    public int totalAdicional(){
         int total = 0;
         Hotel hotel = null;
         for(int i=0; i < alojamiento.size();i++){
             if(alojamiento.get(i) instanceof Hotel){
                 hotel = (Hotel) alojamiento.get(i);
-                total = total + (hotel.adicional() * hotel.get);
+                total = total + hotel.adicional();
             }
         } return total;
-    }*/
+    }
     public int totalBonoDescuento() {
         return 0;
     }

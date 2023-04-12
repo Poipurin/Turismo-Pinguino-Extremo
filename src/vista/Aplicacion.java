@@ -47,7 +47,7 @@ public class Aplicacion {
                         System.out.println("No hay clientes registrados en el hotel");
                     }else{
 
-                        //System.out.println("El Hotel tiene un total adicional de: $"+alojamiento.totalAdicional());
+                        System.out.println("El Hotel tiene un total adicional de: $"+alojamiento.totalAdicional());
                     }
                     break;
                 case 5:
