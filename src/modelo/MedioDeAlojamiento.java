@@ -1,14 +1,17 @@
 package modelo;
 
 public abstract class MedioDeAlojamiento {
+
     private DatosCliente datosCliente;
+    private String tipoAlojamiento;
     private int valorBaseNoche;
     private int cantidadDeNoches;
     private String tipoTemporada;
 
 
-    public MedioDeAlojamiento(DatosCliente datosCliente, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada) {
+    public MedioDeAlojamiento(DatosCliente datosCliente, String tipoAlojamiento, int valorBaseNoche, int cantidadDeNoches, String tipoTemporada) {
         this.datosCliente = datosCliente;
+        this.tipoAlojamiento = tipoAlojamiento;
         this.valorBaseNoche = valorBaseNoche;
         this.cantidadDeNoches = cantidadDeNoches;
         this.tipoTemporada = tipoTemporada;
@@ -16,7 +19,15 @@ public abstract class MedioDeAlojamiento {
 
     public MedioDeAlojamiento() {
     }
+    public DatosCliente getDatosCliente() {
+        return datosCliente;
+    }
 
+    public void setDatosCliente(DatosCliente datosCliente) {
+        this.datosCliente = datosCliente;
+    }
+    public String getTipoAlojamiento(){return tipoAlojamiento;}
+    public void setTipoAlojamiento(String tipoAlojamiento) { this.tipoAlojamiento = tipoAlojamiento;}
     public int getValorBaseNoche() {
         return valorBaseNoche;
     }
@@ -31,14 +42,6 @@ public abstract class MedioDeAlojamiento {
 
     public void setCantidadDeNoches(int cantidadDeNoches) {
         this.cantidadDeNoches = cantidadDeNoches;
-    }
-
-    public DatosCliente getDatosCliente() {
-        return datosCliente;
-    }
-
-    public void setDatosCliente(DatosCliente datosCliente) {
-        this.datosCliente = datosCliente;
     }
 
     public String getTipoTemporada() {
