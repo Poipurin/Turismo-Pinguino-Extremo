@@ -153,20 +153,24 @@ public class Alojamiento {
         int total = 0;
         for (int i = 0; i < alojamiento.size(); i++) {
             if (alojamiento.get(i).getDatosCliente().getRut().compareToIgnoreCase(rut) == 0) {
-                return "El valor a cancelar por el cliente: "+ alojamiento.get(i).getDatosCliente().getRut()+" corresponde al monto de: $"+alojamiento.get(i).valorACancelar();
+                return "El valor a cancelar por el cliente: " + alojamiento.get(i).getDatosCliente().getRut() + " corresponde al monto de: $" + alojamiento.get(i).valorACancelar();
             }
         }
         return "No se encuentra el cliente, intente con otro rut.";
     }
 
-    public int incrementoValorBase() {
+    public String incrementoValorBase(String rut) {
+        Cabagna cabagna = null;
         for (int i = 0; i < alojamiento.size(); i++) {
-            if (alojamiento.get(i) instanceof Cabagna) {
-                incrementoValorBase();
+            if (alojamiento.get(i).getDatosCliente().getRut().compareToIgnoreCase(rut) == 0) {
+                if (alojamiento.get(i) instanceof Cabagna) {
+                    cabagna = (Cabagna) alojamiento.get(i);
+                    return "El incremento al valor base es de: $" + cabagna.incrementaValorBase();
 
+                }
             }
         }
-        return 0;
+        return "No corresponde un incremento del valor base";
     }
 }
 

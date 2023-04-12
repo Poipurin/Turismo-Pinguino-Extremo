@@ -80,7 +80,9 @@ public class Aplicacion {
                     if (alojamiento.getAlojamiento().size() == 0) {
                         System.out.println("No hay alojamientos registrados");
                     } else {
-                        System.out.println(alojamiento.incrementoValorBase());
+                        String rut;
+                        rut = solicitarRut();
+                        System.out.println(alojamiento.incrementoValorBase(rut));
                     }
                     break;
             }
