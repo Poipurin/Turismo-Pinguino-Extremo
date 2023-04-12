@@ -12,11 +12,11 @@ public class Aplicacion {
     public static void main(String[] args) {
         Alojamiento alojamiento = new Alojamiento(new ArrayList<>());
 
-        Carpa carpa = new Carpa(new DatosCliente("Pepito","12.345.236-0"),2000,5,"Temporada media",2);
+        Carpa carpa = new Carpa(new DatosCliente("Pepito","12.345.236-0"),"Carpa",2000,5,"Temporada media",2);
         alojamiento.ingresarCarpa(carpa);
-        Cabagna cabagna = new Cabagna(new DatosCliente("Bárbara", "18.543.213-K"),10000,5,"Temporada baja",10,false,true);
+        Cabagna cabagna = new Cabagna(new DatosCliente("Bárbara", "18.543.213-K"),"Cabaña",10000,5,"Temporada baja",10,false,true);
         alojamiento.ingresarCabagna(cabagna);
-        Hotel hotel = new Hotel(new DatosCliente("Sofi", "19.342.654-2"),120000,5,"Temporada baja",3,false,true);
+        Hotel hotel = new Hotel(new DatosCliente("Sofi", "19.342.654-2"),"Hotel",120000,5,"Temporada baja",3,true,true);
         alojamiento.ingresarHotel(hotel);
 
         int opcion;
@@ -43,7 +43,12 @@ public class Aplicacion {
                     }
                     break;
                 case 4:
-                    System.out.println("Total adicional");
+                    if(alojamiento.getAlojamiento().size()==0){
+                        System.out.println("No hay clientes registrados en el hotel");
+                    }else{
+
+                        //System.out.println("El Hotel tiene un total adicional de: $"+alojamiento.totalAdicional());
+                    }
                     break;
                 case 5:
                     System.out.println("Total bono descuento");
@@ -55,7 +60,11 @@ public class Aplicacion {
                     System.out.println("Valor a cancelar por el cliente");
                     break;
                 case 8:
-                    System.out.println("Aplicar incremento del valor base");
+                    if(alojamiento.getAlojamiento().size()==0){
+                        System.out.println("No hay alojamientos registrados");
+                    }else{
+                        System.out.println(alojamiento.incrementoValorBase());
+                    }
                     break;
 
             }
