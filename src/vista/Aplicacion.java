@@ -12,42 +12,42 @@ public class Aplicacion {
     public static void main(String[] args) {
         Alojamiento alojamiento = new Alojamiento(new ArrayList<>());
 
-        Carpa carpa = new Carpa(new DatosCliente("Pepito","12.345.236-0"),"Carpa",2000,5,"Temporada media",2);
+        Carpa carpa = new Carpa(new DatosCliente("Pepito", "12.345.236-0"), "Carpa", 2000, 5, "Temporada media", 2);
         alojamiento.ingresarCarpa(carpa);
-        Cabagna cabagna = new Cabagna(new DatosCliente("Bárbara", "18.543.213-K"),"Cabaña",10000,5,"Temporada baja",10,false,true);
+        Cabagna cabagna = new Cabagna(new DatosCliente("Bárbara", "18.543.213-K"), "Cabaña", 10000, 5, "Temporada baja", 10, false, true);
         alojamiento.ingresarCabagna(cabagna);
-        Hotel hotel = new Hotel(new DatosCliente("Sofi", "19.342.654-2"),"Hotel",120000,5,"Temporada baja",3,true,true);
+        Hotel hotel = new Hotel(new DatosCliente("Sofi", "19.342.654-2"), "Hotel", 120000, 5, "Temporada baja", 3, true, true);
         alojamiento.ingresarHotel(hotel);
 
         int opcion;
-        do{
+        do {
             opcion = menu();
-            switch (opcion){
+            switch (opcion) {
                 case 1:
                     System.out.println("Ingresar medio de alojamiento");
                     break;
                 case 2:
-                    if(alojamiento.getAlojamiento().size()==0){
+                    if (alojamiento.getAlojamiento().size() == 0) {
                         System.out.println("No hay alojamientos registrados");
-                    }else{
+                    } else {
                         System.out.println(alojamiento.mostrarAlojamientos());
                     }
                     break;
                 case 3:
-                    if(alojamiento.getAlojamiento().size()==0){
+                    if (alojamiento.getAlojamiento().size() == 0) {
                         System.out.println("No hay alojamientos registrados");
-                    }else{
+                    } else {
                         String rut;
                         rut = solicitarRut();
                         System.out.println(alojamiento.datosCliente(rut));
                     }
                     break;
                 case 4:
-                    if(alojamiento.getAlojamiento().size()==0){
+                    if (alojamiento.getAlojamiento().size() == 0) {
                         System.out.println("No hay clientes registrados en el hotel");
-                    }else{
+                    } else {
 
-                        System.out.println("El Hotel tiene un total adicional de: $"+alojamiento.totalAdicional());
+                        System.out.println("El Hotel tiene un total adicional de: $" + alojamiento.totalAdicional());
                     }
                     break;
                 case 5:
@@ -60,20 +60,19 @@ public class Aplicacion {
                     System.out.println("Valor a cancelar por el cliente");
                     break;
                 case 8:
-                    if(alojamiento.getAlojamiento().size()==0){
+                    if (alojamiento.getAlojamiento().size() == 0) {
                         System.out.println("No hay alojamientos registrados");
-                    }else{
+                    } else {
                         System.out.println(alojamiento.incrementoValorBase());
                     }
                     break;
-
             }
         }
-        while(opcion !=9);
+        while (opcion != 9);
 
     }
 
-    public static int menu(){
+    public static int menu() {
         System.out.println("○○○○○○○○○○○○○○ Turismo el pingüino extremo ○○○○○○○○○○○○○○");
         System.out.println("1.- Ingresar medio de alojamiento");
         System.out.println("2.- Mostrar medios de alojamiento ");
@@ -87,7 +86,8 @@ public class Aplicacion {
         System.out.println("Ingrese opción para continuar");
         return Leer.datoInt();
     }
-    public static String solicitarRut(){
+
+    public static String solicitarRut() {
         System.out.println("Ingrese rut Ejemplo formato: 55.555.555-5");
         return Leer.dato();
     }

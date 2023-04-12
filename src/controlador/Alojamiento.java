@@ -91,7 +91,7 @@ public class Alojamiento {
                     carpa = (Carpa) alojamiento.get(i);
                     mensaje = "\n El rut: " + carpa.getDatosCliente().getRut() + "\n se encuentra asociado al cliente: " + carpa.getDatosCliente().getNombre()
                             + "\n El tipo de alojamiento del cliente es: " + carpa.getTipoAlojamiento() + "\n Su estadía es de: " + carpa.getCantidadDeNoches() + " noches" + "\n En temporada: " + carpa.getTipoTemporada() + "\n La cantidad de personas es: " + carpa.getCantidadPersonas() + "\n Con un valor base de:  $" + carpa.getValorBaseNoche() + " por noche"
-                            + "\n El descuento por temporada es de : $" + carpa.bonoDescuento() + "\n El total a cancelar es de: $" + carpa.valorACancelar()  + "\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░";
+                            + "\n El descuento por temporada es de : $" + carpa.bonoDescuento() + "\n El total a cancelar es de: $" + carpa.valorACancelar() + "\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░";
 
                 } else if (alojamiento.get(i) instanceof Cabagna) {
                     cabagna = (Cabagna) alojamiento.get(i);
@@ -115,16 +115,19 @@ public class Alojamiento {
         return "No hay clientes asociados a ese rut en Turismo Pingüino extremo";
 
     }
-    public int totalAdicional(){
+
+    public int totalAdicional() {
         int total = 0;
         Hotel hotel = null;
-        for(int i=0; i < alojamiento.size();i++){
-            if(alojamiento.get(i) instanceof Hotel){
+        for (int i = 0; i < alojamiento.size(); i++) {
+            if (alojamiento.get(i) instanceof Hotel) {
                 hotel = (Hotel) alojamiento.get(i);
                 total = total + hotel.adicional();
             }
-        } return total;
+        }
+        return total;
     }
+
     public int totalBonoDescuento() {
         return 0;
     }
