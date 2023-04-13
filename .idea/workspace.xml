@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="441f0c4e-558b-4c81-95fb-73eea0fba2be" name="Changes" comment="se actualiza DatosCliente.java">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="441f0c4e-558b-4c81-95fb-73eea0fba2be" name="Changes" comment="se actualiza gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,13 +78,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680548992336</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="se actualiza gitignore">
+      <created>1680549096863</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680549096863</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="se añade estructura base con constructores y getters y setters" />
     <MESSAGE value="se añaden métodos" />
     <MESSAGE value="se actualiza DatosCliente.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="se actualiza DatosCliente.java" />
+    <MESSAGE value="se actualiza gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="se actualiza gitignore" />
   </component>
 </project>
