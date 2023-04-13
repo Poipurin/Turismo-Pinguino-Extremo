@@ -28,9 +28,10 @@ public class Aplicacion {
                 case 1:
                     rutCliente = solicitarRut();
                     if(alojamiento.buscarCliente(rutCliente) ==-1){
-                        System.out.println("Ingresa la cantidad de noches a reservar");
-                        int nochesAReservar= Leer.datoInt();
+                        System.out.println("Ingrese su nombre");
+                        String nombre= Leer.dato();
                     }
+
                     System.out.println("Ingresar medio de alojamiento");
                     break;
                 case 2:
