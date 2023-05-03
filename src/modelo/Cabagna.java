@@ -24,7 +24,7 @@ public class Cabagna extends Hospederia {
         int incrementaValorBase = 0;
         if(this.getCapacidad() > 5){
             incrementaValorBase = this.getValorBaseNoche() * 18/100;
-            return incrementaValorBase;
+            setValorBaseNoche(incrementaValorBase + getValorBaseNoche());
 
         }
         return incrementaValorBase;
